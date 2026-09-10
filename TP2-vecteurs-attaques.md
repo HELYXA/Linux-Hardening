@@ -1,4 +1,4 @@
-# TP2 — Vecteurs d'attaques
+# TP2 - Vecteurs d'attaques
 
 > Mettre en évidence les vecteurs d'attaque liés aux privilèges (mauvaises permissions, sudo mal configuré, scripts dangereux), puis les corriger.
 
@@ -52,7 +52,7 @@ sudo nano /home/scripttest.sh
 
 **Risque** : si un attaquant modifie ce script, il peut exécuter du code arbitraire en root, supprimer des données critiques ou installer une backdoor.
 
-**Correction** — déplacer le script hors de portée, le sécuriser :
+**Correction** - déplacer le script hors de portée, le sécuriser :
 
 ```bash
 sudo mv scripttest.sh /usr/local/sbin/
