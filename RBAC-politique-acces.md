@@ -1,8 +1,8 @@
-# TP — Politique de contrôle d'accès basée sur les rôles (RBAC)
+# TP - Politique de contrôle d'accès basée sur les rôles (RBAC)
 
 > Document officiel de politique RBAC pour un environnement Linux : rôles, gestion des comptes, processus de validation, audit.
 
-**Contexte** : cours Sécurité Linux, Bachelor 2 Cybersécurité — rédaction d'un document de politique d'accès aussi rigoureux qu'un vrai document d'entreprise.
+**Contexte** : cours Sécurité Linux, Bachelor 2 Cybersécurité - rédaction d'un document de politique d'accès aussi rigoureux qu'un vrai document d'entreprise.
 
 ## Objet
 
@@ -84,4 +84,4 @@ Elle s'inscrit dans la protection des données sensibles, la conformité aux nor
 
 ---
 
-*Document rédigé dans le cadre du Bachelor 2 Cybersécurité (NEXA Digital School) — module Sécurité Linux.*
+*Document rédigé dans le cadre du Bachelor 2 Cybersécurité (NEXA Digital School) - module Sécurité Linux.*
