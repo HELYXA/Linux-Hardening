@@ -1,4 +1,4 @@
-# TP3 — PAM (Pluggable Authentication Modules)
+# TP3 - PAM (Pluggable Authentication Modules)
 
 > Configurer PAM pour renforcer l'authentification : complexité des mots de passe, verrouillage après échecs, restrictions d'accès et plages horaires.
 
@@ -9,9 +9,9 @@
 3. Restreindre l'accès à certains utilisateurs avec `pam_access`
 4. Configurer des restrictions temporelles avec `pam_time`
 
-> ⚠️ Une mauvaise configuration de PAM peut bloquer l'accès au système entier — toujours garder une session root ouverte en parallèle pour tester sans risque de se retrouver bloqué dehors.
+> ⚠️ Une mauvaise configuration de PAM peut bloquer l'accès au système entier - toujours garder une session root ouverte en parallèle pour tester sans risque de se retrouver bloqué dehors.
 
-## Étape 1 — Sauvegarder les fichiers de configuration
+## Étape 1 - Sauvegarder les fichiers de configuration
 
 ```bash
 sudo cp /etc/pam.d/common-password /etc/pam.d/common-password.bak
@@ -20,14 +20,14 @@ sudo cp /etc/security/access.conf /etc/security/access.conf.bak
 sudo cp /etc/security/time.conf /etc/security/time.conf.bak
 ```
 
-## Étape 2 — Complexité des mots de passe (`pam_pwquality`)
+## Étape 2 - Complexité des mots de passe (`pam_pwquality`)
 
 ```bash
 sudo apt update
 sudo apt install libpam-pwquality -y
 ```
 
-## Étape 3 — Limiter les tentatives de connexion (`pam_faillock`)
+## Étape 3 - Limiter les tentatives de connexion (`pam_faillock`)
 
 ```bash
 sudo apt install libpam-modules-bin -y
@@ -38,7 +38,7 @@ Règles configurées :
 - `deny=5` : verrouille le compte après 5 tentatives échouées
 - `unlock_time=300` : déverrouillage automatique après 5 minutes
 
-## Étape 4 — Restreindre l'accès (`pam_access`)
+## Étape 4 - Restreindre l'accès (`pam_access`)
 
 ```bash
 sudo nano /etc/pam.d/common-auth
@@ -63,7 +63,7 @@ sudo nano /etc/security/access.conf
 + : (sudo) : 192.168.x.x/24
 ```
 
-## Étape 5 — Restrictions temporelles (`pam_time`)
+## Étape 5 - Restrictions temporelles (`pam_time`)
 
 ```bash
 sudo nano /etc/pam.d/common-account
@@ -83,7 +83,7 @@ login ; * ; * ; Al0800-1800
 login ; * ; test ; !Al0000-2400
 ```
 
-## Étape 6 — Restreindre `su` avec `pam_wheel`
+## Étape 6 - Restreindre `su` avec `pam_wheel`
 
 `su` permet de changer d'identité (généralement vers root) sans se déconnecter. Sans restriction, n'importe quel utilisateur connaissant le mot de passe root peut l'utiliser.
 
@@ -106,7 +106,7 @@ groups nom_utilisateur
 
 Résultat attendu : un utilisateur non membre du groupe obtient `su: Permission denied`.
 
-## Étape 7 — Tester la configuration
+## Étape 7 - Tester la configuration
 
 ```bash
 passwd                # tester un mot de passe faible -> doit être refusé
