@@ -1,4 +1,4 @@
-# 🐧 Linux Hardening — Travaux Pratiques
+# 🐧 Linux Hardening - Travaux Pratiques
 
 > Série de 5 TP sur le durcissement (hardening) d'un système Linux : gestion des privilèges, vecteurs d'attaque, PAM, SELinux, et politique d'accès RBAC.
 
@@ -6,10 +6,10 @@
 
 | TP | Sujet |
 |---|---|
-| [TP1 — Sécurité Root](TP1-securite-root.md) | Désactivation du login root, création d'un utilisateur avec sudo restreint |
-| [TP2 — Vecteurs d'attaques](TP2-vecteurs-attaques.md) | Comptes sur-privilégiés, permissions dangereuses, scripts à risque |
-| [TP3 — PAM](TP3-pam.md) | Complexité des mots de passe, anti-bruteforce, restrictions d'accès et horaires |
-| [TP4 — SELinux](TP4-selinux.md) | Installation, contextes de sécurité, mode enforcing, analyse des AVC |
+| [TP1 - Sécurité Root](TP1-securite-root.md) | Désactivation du login root, création d'un utilisateur avec sudo restreint |
+| [TP2 - Vecteurs d'attaques](TP2-vecteurs-attaques.md) | Comptes sur-privilégiés, permissions dangereuses, scripts à risque |
+| [TP3 - PAM](TP3-pam.md) | Complexité des mots de passe, anti-bruteforce, restrictions d'accès et horaires |
+| [TP4 - SELinux](TP4-selinux.md) | Installation, contextes de sécurité, mode enforcing, analyse des AVC |
 | [Politique RBAC](RBAC-politique-acces.md) | Document officiel de contrôle d'accès basé sur les rôles |
 
 ## 🎯 Ce que couvre cette série de TP
@@ -26,4 +26,4 @@
 
 ---
 
-*Travaux pratiques réalisés dans le cadre du Bachelor 2 Cybersécurité (NEXA Digital School) — module Sécurité Linux.*
+*Travaux pratiques réalisés dans le cadre du Bachelor 2 Cybersécurité (NEXA Digital School) - module Sécurité Linux.*
