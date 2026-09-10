@@ -1,10 +1,10 @@
-# TP4 — SELinux
+# TP4 - SELinux
 
 > Installer et activer SELinux sur une distribution qui utilise AppArmor par défaut (Ubuntu/Kali), puis explorer les contextes de sécurité et le mode enforcing.
 
 ## 📌 Contexte
 
-Ubuntu 24.04 LTS (et les versions récentes) n'utilisent pas SELinux par défaut — le contrôle d'accès obligatoire (MAC) par défaut est **AppArmor**. Il reste possible d'activer SELinux manuellement.
+Ubuntu 24.04 LTS (et les versions récentes) n'utilisent pas SELinux par défaut - le contrôle d'accès obligatoire (MAC) par défaut est **AppArmor**. Il reste possible d'activer SELinux manuellement.
 
 ## Installation
 
@@ -39,7 +39,7 @@ sudo chcon -t httpd_sys_content_t /var/www/html/example.txt
 sudo ausearch -m avc -ts today
 ```
 
-## Exercice 1 — Contextes de sécurité
+## Exercice 1 - Contextes de sécurité
 
 ```bash
 id                    # contexte SELinux de l'utilisateur
@@ -64,7 +64,7 @@ sudo chcon -t tmp_t /tmp/test1.txt
 ```
 Contexte résultant : `user: unconfined_u`, `rôle: object_r`, `type: tmp_t`, `level: s0`.
 
-## Exercice 2 — Contextes des applications (Apache) et mode enforcing
+## Exercice 2 - Contextes des applications (Apache) et mode enforcing
 
 ```bash
 # S'assurer que SELinux est bien installé et actif
@@ -139,7 +139,7 @@ wget http://localhost/test2   # -> 200 OK
 
 Modifier le contexte de l'exécutable Apache en `unconfined_exec_t` le rend "non restreint" par SELinux — il peut alors accéder aux fichiers même avec un contexte incorrect (ce qui illustre bien le risque de mal configurer les contextes).
 
-## Exercice 3 — User mapping et `semanage`
+## Exercice 3 - User mapping et `semanage`
 
 ```bash
 sudo semanage login -l     # user mapping
