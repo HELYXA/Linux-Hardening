@@ -1,4 +1,4 @@
-# TP1 — Sécurité Root
+# TP1 - Sécurité Root
 
 > Restreindre la connexion directe au compte root et configurer des privilèges sudo limités pour un utilisateur dédié.
 
@@ -8,7 +8,7 @@
 2. Créer un utilisateur avec des privilèges limités
 3. Configurer sudo pour n'autoriser que des commandes précises
 
-## Étape 1 — Désactiver la connexion root via SSH
+## Étape 1 - Désactiver la connexion root via SSH
 
 ```bash
 sudo nano /etc/ssh/sshd_config
@@ -28,13 +28,13 @@ Redémarrer le service :
 sudo systemctl restart sshd
 ```
 
-## Étape 2 — Créer un utilisateur non-root
+## Étape 2 - Créer un utilisateur non-root
 
 ```bash
 sudo adduser utilisateur1
 ```
 
-## Étape 3 — Ajouter l'utilisateur au groupe sudo
+## Étape 3 - Ajouter l'utilisateur au groupe sudo
 
 ```bash
 # Debian/Ubuntu
@@ -44,7 +44,7 @@ sudo usermod -aG sudo utilisateur1
 sudo usermod -aG wheel utilisateur1
 ```
 
-## Étape 4 — Configurer les permissions sudo précises
+## Étape 4 - Configurer les permissions sudo précises
 
 ```bash
 sudo visudo
@@ -65,7 +65,7 @@ utilisateur1 ALL=(ALL) NOPASSWD: ALL
 
 > ⚠️ Toujours utiliser `visudo` pour éditer le fichier sudoers : il vérifie la syntaxe avant de sauvegarder.
 
-## Étape 5 — Tester la configuration
+## Étape 5 - Tester la configuration
 
 ```bash
 su - utilisateur1
@@ -73,7 +73,7 @@ sudo apt update              # commande autorisée
 sudo systemctl restart sshd  # commande non autorisée -> erreur attendue
 ```
 
-## Étape 6 — Vérifier les restrictions
+## Étape 6 - Vérifier les restrictions
 
 ```bash
 sudo -l -U utilisateur1
@@ -93,7 +93,7 @@ sudo systemctl restart ssh
 
 ## ✅ Conclusion
 
-Ces étapes appliquent le **principe du moindre privilège** : limiter l'accès direct au compte root, créer un utilisateur dédié pour les tâches administratives, et restreindre précisément ce qu'il peut exécuter en sudo — réduisant ainsi la surface d'attaque.
+Ces étapes appliquent le **principe du moindre privilège** : limiter l'accès direct au compte root, créer un utilisateur dédié pour les tâches administratives, et restreindre précisément ce qu'il peut exécuter en sudo - réduisant ainsi la surface d'attaque.
 
 ## 🤔 Questions de réflexion
 
