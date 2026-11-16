@@ -93,7 +93,7 @@ sudo systemctl restart ssh
 
 ## ✅ Conclusion
 
-Ces étapes appliquent le **principe du moindre privilège** : limiter l'accès direct au compte root, créer un utilisateur dédié pour les tâches administratives, et restreindre précisément ce qu'il peut exécuter en sudo - réduisant ainsi la surface d'attaque.
+Ces étapes appliquent le **principe du moindre privilège** : limiter l'accès direct au compte root, créer un utilisateur dédié pour les tâches administratives, et restreindre précisément ce qu'il peut exécuter en sudo, réduisant ainsi la surface d'attaque.
 
 ## 🤔 Questions de réflexion
 
