@@ -4,7 +4,7 @@
 
 ## 📌 Contexte
 
-Ubuntu 24.04 LTS (et les versions récentes) n'utilisent pas SELinux par défaut - le contrôle d'accès obligatoire (MAC) par défaut est **AppArmor**. Il reste possible d'activer SELinux manuellement.
+Ubuntu 24.04 LTS (et les versions récentes) n'utilisent pas SELinux par défaut, le contrôle d'accès obligatoire (MAC) par défaut est **AppArmor**. Il reste possible d'activer SELinux manuellement.
 
 ## Installation
 
