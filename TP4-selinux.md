@@ -137,7 +137,7 @@ ps -eZ | grep apache2
 wget http://localhost/test2   # -> 200 OK
 ```
 
-Modifier le contexte de l'exécutable Apache en `unconfined_exec_t` le rend "non restreint" par SELinux — il peut alors accéder aux fichiers même avec un contexte incorrect (ce qui illustre bien le risque de mal configurer les contextes).
+Modifier le contexte de l'exécutable Apache en `unconfined_exec_t` le rend "non restreint" par SELinux, il peut alors accéder aux fichiers même avec un contexte incorrect (ce qui illustre bien le risque de mal configurer les contextes).
 
 ## Exercice 3 - User mapping et `semanage`
 
@@ -154,7 +154,7 @@ sudo useradd aleatoire
 sudo passwd aleatoire
 ```
 
-Le fichier `/proc/self/attr/prev` contient le contexte SELinux du processus parent qui a lancé le shell actuel — utile pour tracer une chaîne de connexions (ex. via SSH).
+Le fichier `/proc/self/attr/prev` contient le contexte SELinux du processus parent qui a lancé le shell actuel, utile pour tracer une chaîne de connexions (ex. via SSH).
 
 ## 🛠️ Stack / outils
 
